@@ -49,3 +49,13 @@ function calculateStock(_atual, _max, _min) {
 }
 console.log(calculateStock(100, 300, 0));
 console.log(calculateStock(151, 300, 0));
+
+function calculateAge(_nascimento, _atual) {
+    const anos = _atual - _nascimento;
+    const meses = 12 * anos;
+    const dias = 365 * anos;
+    const semanas = 52 * anos;
+    return `${anos} anos ou ${meses} meses ou ${dias} dias ou ${semanas} semanas `;
+}
+console.log(calculateAge(1994, 2022));
+

@@ -1,11 +1,14 @@
 function calculateSalary(_salario, _vendas) {
     let novoSalario;
+    let comissao;
     const limite = 1200;
     if(_vendas <= limite) {
-        novoSalario = _salario  + _vendas * 0.03;
+        comissao =  _vendas * 0.03
+        novoSalario = _salario  + comissao;
         return novoSalario;
     }else {
-        novoSalario = _salario + limite * 0.03 + (_vendas - limite) * 0.05;
+        comissao = limite * 0.03 + (_vendas - limite) * 0.05
+        novoSalario = _salario + comissao;
         return novoSalario;
     }
 }
@@ -35,4 +38,8 @@ function cashMachine(_saque, _salario, _vendas) {
         return "Verifique se o saque é uma quantia válida";
     }
 }
-console.log(cashMachine(350, 1212, 2000))
+console.log(cashMachine(350, 1212, 2000));
+
+function calculateStock(_atual, _max, _min) {
+
+}

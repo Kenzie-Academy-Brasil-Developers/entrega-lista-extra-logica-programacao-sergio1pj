@@ -55,7 +55,7 @@ function calculateAge(_nascimento, _atual) {
     const meses = 12 * anos;
     const dias = 365 * anos;
     const semanas = 52 * anos;
-    return `${anos} ano(s) ou ${meses} mes(es) ou ${dias} dia(s) ou ${semanas} semana(s) `;
+    return `Idade em anos: ${anos}, idade em meses: ${meses}, idade em dias: ${dias}, idade em semanas: ${semanas}`;
 }
 console.log(calculateAge(1994, 2022));
 

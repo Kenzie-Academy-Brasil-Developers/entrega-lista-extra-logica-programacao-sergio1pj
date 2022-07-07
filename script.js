@@ -12,8 +12,8 @@ function calculateSalary(_salario, _vendas) {
         return novoSalario;
     }
 }
-console.log(calculateSalary(1212, 1000));
-console.log(calculateSalary(1212, 2000));
+
+console.log(calculateSalary(1000, 1480));
 
 function cashMachine(_saque, _salario, _vendas) {
     let notasDisponiveis = [200, 100, 50, 20, 10, 5, 2];
@@ -38,7 +38,7 @@ function cashMachine(_saque, _salario, _vendas) {
         return "Verifique se o saque é uma quantia válida";
     }
 }
-console.log(cashMachine(350, 1212, 2000));
+console.log(cashMachine(550, 1000, 1480));
 
 function calculateStock(_atual, _max, _min) {
     let quantidadeMedia = (_max + _min) / 2;
@@ -55,7 +55,17 @@ function calculateAge(_nascimento, _atual) {
     const meses = 12 * anos;
     const dias = 365 * anos;
     const semanas = 52 * anos;
-    return `${anos} anos ou ${meses} meses ou ${dias} dias ou ${semanas} semanas `;
+    return `${anos} ano(s) ou ${meses} mes(es) ou ${dias} dia(s) ou ${semanas} semana(s) `;
 }
 console.log(calculateAge(1994, 2022));
 
+const matrizQuadrada3x3 = [ [1, 2, 3] , [4, 5, 6] , [7, 8, 9] ];
+function getDiagonal(_matriz) {
+    const diagonal = [];
+    const N = _matriz.length;
+    for(let i = 0; i < N; i++) {
+        diagonal.push(_matriz[i][i]);
+    }
+    return diagonal;
+}
+console.log(getDiagonal(matrizQuadrada3x3));

@@ -41,5 +41,11 @@ function cashMachine(_saque, _salario, _vendas) {
 console.log(cashMachine(350, 1212, 2000));
 
 function calculateStock(_atual, _max, _min) {
-
+    let quantidadeMedia = (_max + _min) / 2;
+    if(_atual >= quantidadeMedia) {
+        return "Não efetuar compra";
+    }
+    return "Efetuar compra";
 }
+console.log(calculateStock(100, 300, 0));
+console.log(calculateStock(151, 300, 0));
